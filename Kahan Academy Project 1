@@ -1,0 +1,27 @@
+CREATE TABLE cosmetics (item INTEGER PRIMARY KEY, id TEXT, color TEXT, brand TEXT, average_qty_sold INTEGER, price INTEGER);
+
+INSERT INTO cosmetics VALUES 
+(1, "Blush", "Peach", "Revlon", 5, 4.99); 
+INSERT INTO cosmetics VALUES (2, "Lipstick", "Red", "Maybelline", 8, 3.75);
+INSERT INTO cosmetics VALUES (3, "Foundation", "Tan", "Covergirl", 4, 12.99);
+INSERT INTO cosmetics VALUES (4, "Bronzer", "Brown", "Physicians Formula", 7, 10.99);
+INSERT INTO cosmetics VALUES (5, "Powder", "Transluscent", "Revlon", 8, 5.99);
+INSERT INTO cosmetics VALUES (6, "Eyeshadow", "Pink", "Covergirl", 8, 15.00);
+INSERT INTO cosmetics VALUES (7, "Perfume", "Clear", "YSL", 2, 45);
+INSERT INTO cosmetics VALUES (8, "Nail Polish", "Multi", "OPI", 10, 8.98);
+INSERT INTO cosmetics VALUES (9, "Hair Brush", "Purple", "WET Brands", 6, 3.00);
+INSERT INTO cosmetics VALUES (10, "Lip Gloss", "White", "Colourpop", 3, 4.98);
+INSERT INTO cosmetics VALUES (11, "Highlight", "Gold", "Covergirl", 5, 8.98);
+INSERT INTO cosmetics VALUES (12, "Spray", "Clear", "Covergirl", 8, 6.98);
+INSERT INTO cosmetics VALUES (13, " Moisturizer", "White", "ELF", 13, 7.00);
+INSERT INTO cosmetics VALUES (14, "Lip Balm", "Clear", "Lip Smackers", 4, .98);
+INSERT INTO cosmetics VALUES (15, "Brow Gel", "Brown", "Maybelline", 13, 9.99);
+
+-- To Easily Determine the Highest Priced Item:
+SELECT * FROM cosmetics ORDER BY price desc; 
+
+-- To Determine Popularity of an Item:
+SELECT id, brand, price, average_qty_sold FROM cosmetics ORDER BY average_qty_sold desc;
+
+-- To organize brands alphabetically
+SELECT * FROM cosmetics ORDER BY brand; 
